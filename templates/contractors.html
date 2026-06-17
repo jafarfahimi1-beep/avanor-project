@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>پیمانکاران</title>
+
+<style>
+body{
+    margin:0;
+    font-family:tahoma;
+    background:#eef2f7;
+}
+
+.container{
+    padding:40px;
+}
+
+.header{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    padding:35px;
+    border-radius:25px;
+    margin-bottom:30px;
+}
+
+.form-box{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+h1,h2{
+    margin-top:0;
+}
+
+input, textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:15px;
+    box-sizing:border-box;
+    font-family:tahoma;
+}
+
+textarea{
+    height:100px;
+}
+
+button{
+    background:#fca311;
+    color:#14213d;
+    border:none;
+    padding:14px 30px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+th,td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+    text-align:right;
+}
+
+th{
+    background:#14213d;
+    color:white;
+}
+
+.back{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    color:#1e3c72;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>پیمانکاران</h1>
+        <p>مدیریت پیمانکاران پروژه‌های Avanor Group</p>
+    </div>
+
+    <div class="form-box">
+        <h2>ایجاد پیمانکار جدید</h2>
+
+        <form method="POST">
+            <input type="text" name="name" placeholder="نام پیمانکار" required>
+            <input type="text" name="company" placeholder="نام شرکت">
+            <input type="text" name="phone" placeholder="شماره تماس">
+            <input type="text" name="skill" placeholder="تخصص">
+            <input type="text" name="address" placeholder="آدرس">
+            <textarea name="description" placeholder="توضیحات"></textarea>
+
+            <button type="submit">ثبت پیمانکار</button>
+        </form>
+    </div>
+
+    <h2>لیست پیمانکاران</h2>
+
+    <table>
+        <tr>
+            <th>نام</th>
+            <th>شرکت</th>
+            <th>تماس</th>
+            <th>تخصص</th>
+            <th>آدرس</th>
+            <th>توضیحات</th>
+        </tr>
+
+        {% for c in contractors %}
+        <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.company }}</td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.skill }}</td>
+            <td>{{ c.address }}</td>
+            <td>{{ c.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a class="back" href="/home">بازگشت به داشبورد</a>
+
+</div>
+
+</body>
+</html>

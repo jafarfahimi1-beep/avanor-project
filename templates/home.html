@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>داشبورد Avanor Group</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:tahoma;
+    background:#eef2f7;
+}
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#101828;
+    color:white;
+    position:fixed;
+    right:0;
+    top:0;
+    padding:25px;
+    box-sizing:border-box;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#fca311;
+    margin-bottom:10px;
+}
+
+.sidebar p{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+.menu{
+    margin-top:30px;
+}
+
+.menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,0.08);
+    padding:15px;
+    margin:12px 0;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#fca311;
+    color:#101828;
+}
+
+.logout{
+    display:block;
+    margin-top:40px;
+    color:#ffb4b4;
+    text-decoration:none;
+}
+
+.content{
+    margin-right:260px;
+    padding:35px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.hero h1{
+    margin:0;
+    font-size:45px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    color:#f1f5f9;
+}
+
+.hero h3{
+    margin-top:25px;
+    font-size:24px;
+    font-weight:normal;
+}
+
+.cards{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    text-decoration:none;
+    color:#14213d;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    margin:0;
+}
+
+.card p{
+    color:gray;
+    line-height:2;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        Avanor Group
+    </div>
+
+    <p>
+        سیستم مدیریت پروژه
+    </p>
+
+    <div class="menu">
+
+        <a href="/home">داشبورد</a>
+
+        <a href="/contractors">
+            پیمانکاران
+        </a>
+
+        <a href="/warehouse">
+            انبارداری
+        </a>
+
+        <a href="/daily-tasks">
+            کارهای روزمره
+        </a>
+
+        <a href="/reports">
+            گزارشات
+        </a>
+
+    </div>
+
+    <a class="logout" href="/logout">
+        خروج از حساب
+    </a>
+
+</div>
+
+<div class="content">
+
+    <div class="hero">
+
+        <h1>
+            مدیریت پروژه
+        </h1>
+
+        <p>
+            مدیریت هوشمند پروژه‌های ساختمانی
+        </p>
+
+        <h3>
+            Avanor Group
+        </h3>
+
+    </div>
+
+    <div class="cards">
+
+        <a class="card" href="/contractors">
+
+            <h2>
+                پیمانکاران
+            </h2>
+
+            <p>
+                مدیریت اطلاعات پیمانکاران پروژه
+            </p>
+
+        </a>
+
+        <a class="card" href="/warehouse">
+
+            <h2>
+                انبارداری
+            </h2>
+
+            <p>
+                مدیریت مصالح و تجهیزات پروژه
+            </p>
+
+        </a>
+
+        <a class="card" href="/daily-tasks">
+
+            <h2>
+                کارهای روزمره
+            </h2>
+
+            <p>
+                ثبت و پیگیری فعالیت‌های روزانه
+            </p>
+
+        </a>
+
+        <a class="card" href="/reports">
+
+            <h2>
+                گزارشات
+            </h2>
+
+            <p>
+                مشاهده و مدیریت گزارش‌ها
+            </p>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
